@@ -1,42 +1,28 @@
-import mobileMenu from "./mobileMenu";
-
 const scrollPage = () => {
-
-    // mobileBtn - btn to click
-    const mobileBtn = document.querySelector('.menu-btn'),
-        // parentWrapper have mobile menu list
-        parentWrapper = document.querySelector('.mobile-menu'),
-        btnTop = document.querySelector('.btn-top');
+    const headerMenu = document.querySelector('.header');
 
     let winScroll = window.pageYOffset;
 
-    //show btn goTop
+    //show header
     window.addEventListener('scroll', ()=>{
         winScroll = window.pageYOffset;
         if ((document.documentElement.clientHeight+300) <= winScroll){
-            btnTop.style.display = 'block';
+            headerMenu.classList.add('fixed');
+
         } else if(document.documentElement.clientHeight+300 > winScroll){
-            btnTop.style.display = '';
+            headerMenu.classList.remove('fixed');
         }
     });
 
-    mobileMenu(mobileBtn, parentWrapper);
-
-    function slowScroll(anchorsSelector, trigger = false, mobileBtn, parentWrapper) {
-        const anchors = document.querySelectorAll(anchorsSelector);
+    //scroll to elem after click
+    function slowScroll() {
+        const anchors = document.querySelectorAll('a[href*="#"]');
 
         for (let anchor of anchors) {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
                 const blockID = anchor.getAttribute('href').substr(1);
-
-                if (trigger) {
-                    mobileBtn.classList.remove('menu-btn-active');
-                    parentWrapper.style.left = '';
-                    parentWrapper.style.opacity = '';
-                    document.body.style.overflow = '';
-                }
 
                 document.getElementById(blockID).scrollIntoView({
                     behavior: 'smooth',
@@ -46,10 +32,7 @@ const scrollPage = () => {
         }
     }
 
-    slowScroll('.nav a[href*="#"]');
-    slowScroll('a.btn-top[href*="#"]');
-    slowScroll('a.logo[href*="#"]');
-    slowScroll('.mobile-menu a[href*="#"]', true, mobileBtn, parentWrapper);
+    slowScroll();
 };
 
 export default scrollPage;

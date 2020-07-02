@@ -1,0 +1,33 @@
+.review {
+  .section-title {
+    text-align: center;
+  }
+  .review-swiper {
+    position: relative;
+  }
+  .swiper-button-prev {
+    top: 90px;
+    left: -60px;
+  }
+  .swiper-button-next {
+    top: 90px;
+    right: -50px;
+  }
+  .swiper-pagination-bullet  {
+    border-radius: 0;
+    width: 35px;
+    height: 2px;
+    background: #e8e8e8;
+  }
+  .swiper-pagination-bullet-active {
+    background: #fbba2f;
+    height: 3px;
+  }
+  .review-swiper__wrapper-content {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+}

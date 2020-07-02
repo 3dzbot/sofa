@@ -1,0 +1,68 @@
+.price2 {
+  background: url("../assets/img/price/bg2.png") center / cover no-repeat;
+  color: #fff;
+  .container {
+    padding: 0;
+  }
+  .price-row {
+    padding: 95px 0 100px;
+    justify-content: space-between;
+  }
+  .section-title {
+    padding: 0 0 65px;
+    color: #fff;
+  }
+  .price-form-wrapper {
+    justify-content: space-between;
+    border: none;
+  }
+  .price-column {
+    &:nth-child(2){
+      max-width: 38%;
+    }
+  }
+
+  .price-form-wrapper:before,
+  .price-form-wrapper:after {
+    display: none;
+  }
+}
+.svg-border, .svg-border2 {
+  position: relative;
+  z-index: 2;
+  svg {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 98%;
+    height: 98%;
+    z-index: -1;
+  }
+}
+.price2-row {
+  display: flex;
+  &:not(:last-child){
+    padding-bottom: 30px;
+  }
+}
+.price2-column {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  &:nth-child(1) {
+    width: 180px;
+  }
+  &:nth-child(2){
+    margin-left: 80px;
+    position: relative;
+    max-width: 200px;
+    &:before {
+      content: url("../assets/img/price/arrow-long.png");
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -85px;
+    }
+  }
+}

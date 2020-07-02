@@ -1,0 +1,35 @@
+.price3 {
+  background: url("../assets/img/price/bg3.png") top / cover no-repeat;
+  color: #fff;
+  .section-title {
+    font-size: 26px;
+    line-height: 30px;
+    padding-top: 0;
+    color: #fff;
+    span {
+      white-space: pre;
+    }
+  }
+  .price-row {
+    padding: 95px 0 90px;
+    align-items: center;
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 300px  ;
+    }
+  }
+  .price-form-wrapper {
+    border: none;
+  }
+  .price-form-wrapper:before,
+  .price-form-wrapper:after {
+    display: none;
+  }
+  form {
+    display: flex;
+  }
+  .phone-input {
+    margin-bottom: 0;
+  }
+}

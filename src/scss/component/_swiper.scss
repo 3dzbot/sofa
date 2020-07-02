@@ -1,0 +1,15 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f9b92f;
+}
+
+.swiper-button-prev {
+  &:after {
+    content: url("../assets/img/icon/arrow-left.png");
+  }
+}
+.swiper-button-next {
+  &:after {
+    content: url("../assets/img/icon/arrow-right.png");
+  }
+}

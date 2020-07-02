@@ -1,0 +1,161 @@
+.services {
+  .container {
+    padding-bottom: 100px;
+    position: relative;
+  }
+  h2 {
+    text-align: center;
+  }
+  .swiper-wrapper {
+    padding-top: 90px;
+  }
+  .swiper-pagination {
+    top: 0;
+    bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    .swiper-pagination-bullet {
+      width: 150px!important;
+      position: relative;
+      background: #f9fafa;
+      color: #202020;
+      border-radius: 0;
+      padding: 10px 0;
+      height: auto;
+      border: 1px solid #fff;
+      opacity: 1;
+      font-size: 12px;
+      line-height: 16px;
+      & > div {
+        opacity: .5;
+      }
+      &-active {
+        border: 1px solid #f9b92f;
+        //color: #000;
+        background: #fff;
+        font-weight: 600;
+        & > div {
+          opacity: 1;
+        }
+        span {
+          color: #fbba2f;
+          font-weight: normal;
+        }
+      }
+      &:after {
+        position: absolute;
+        content: url("../assets/img/services/arrow.png");
+        top: 40%;
+        right: -42px;
+      }
+      &-active:after {
+        content: url("../assets/img/services/arrow-yellow.png");
+      }
+    }
+  }
+}
+.services .swiper-button-prev,
+.services .swiper-button-next {
+  color: #f9b92f;
+  top: 60%;
+}
+.services .swiper-button-prev {
+  left: -60px;
+  &:after {
+    content: url("../assets/img/icon/arrow-left.png");
+  }
+}
+.services .swiper-button-next {
+  right: -50px;
+  &:after {
+    content: url("../assets/img/icon/arrow-right.png");
+  }
+}
+.services-swiper-row {
+  margin: 0 -15px;
+  display: flex;
+}
+.services-swiper-column {
+  padding: 0 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.services-count {
+  font-size: 16px;
+  padding-bottom: 18px;
+  color: #202020;
+  span {
+    font-size: 26px;
+    color: #f9b92f;
+  }
+}
+.services-card-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 36px;
+  font-weight: 600;
+}
+.services-list {
+  padding-left: 20px;
+  padding-bottom: 46px;
+  li {
+    position: relative;
+    line-height: 16px;
+    font-weight: 300;
+    &:not(:last-child) {
+      padding-bottom: 25px;
+    }
+    &:before {
+      position: absolute;
+      content: url("../assets/img/price/checked.png");
+      width: 30px;
+      height: 30px;
+      left: -25px;
+      top: 0;
+    }
+    span.services-span {
+      position: relative;
+      transition: .3s linear;
+      cursor: pointer;
+      border-bottom: 1px solid #f9b92f;
+      &:hover {
+        color: #f9b92f;
+      }
+      span.services-list-span {
+        position: absolute;
+        border: 2px solid #fbba2f;
+        bottom: -53px;
+        background: #fff;
+        left: -20px;
+        display: none;
+        padding: 10px 20px;
+        opacity: 0;
+        transition: opacity .3s linear;
+        z-index: 2;
+        white-space: pre;
+        &:before {
+          border: 12px solid transparent;
+          border-bottom: 12px solid #fbba2f;
+          position: absolute;
+          content: '';
+          left: 18px;
+          top: -25px;
+        }
+        &:after {
+          border: 12px solid transparent;
+          border-bottom: 12px solid #fff;
+          position: absolute;
+          content: '';
+          left: 18px;
+          top: -23px;
+        }
+      }
+      &:hover span.services-list-span {
+        opacity: 1;
+        display: inline-block;
+        color: #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0,0,0,.4);
+  display: none;
+}
+.popup-more, .popup-calc {
+  display: none;
+  padding: 0 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 101;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  .container {
+    width: 490px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    padding: 90px 0 0;
+    text-align: center;
+  }
+  form {
+    text-align: center;
+    padding-bottom: 76px;
+    padding-top: 24px;
+  }
+}
+.popup-after-title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 24px;
+  padding-bottom: 46px;
+  text-align: center;
+}
+.popup-row {
+  display: flex;
+  margin: 0 -17px;
+  padding-bottom: 46px;
+}
+.popup-column {
+  width: 33.333%;
+  padding: 0 17px;
+  p {
+    padding-left: 25px;
+    position: relative;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    &:before {
+      content: url("../assets/img/popup/check.png");
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+.popup-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
