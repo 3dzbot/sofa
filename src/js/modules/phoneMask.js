@@ -1,7 +1,7 @@
 const phoneMask = () => {
 
     jQuery(function($){
-        $(".phone-input").mask("+38(099) 999-99-99");
+        $(".phone-input").mask("+7(999) 999-99-99");
     });
 };
 

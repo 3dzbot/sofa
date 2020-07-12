@@ -4201,7 +4201,7 @@ var modalPopup = function modalPopup() {
 __webpack_require__.r(__webpack_exports__);
 var phoneMask = function phoneMask() {
   jQuery(function ($) {
-    $(".phone-input").mask("+38(099) 999-99-99");
+    $(".phone-input").mask("+7(999) 999-99-99");
   });
 };
 
